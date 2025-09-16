@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Tareas Universitarias</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gestor de Tareas Universitarias</h1>
+
+    <!-- Formulario -->
+    <form id="taskForm" class="task-form">
+      <label>
+        Título de la tarea
+        <input type="text" id="title" required>
+      </label>
+      <label>
+        Asignatura
+        <input type="text" id="course" required>
+      </label>
+      <label>
+        Tipo de materia
+        <select id="subjectType">
+          <option value="pensum" selected>Pénsum</option>
+          <option value="electiva">Electiva</option>
+        </select>
+      </label>
+      <label>
+        Fecha de entrega
+        <input type="date" id="due">
+      </label>
+      <label>
+        Prioridad
+        <select id="priority">
+          <option value="alta">Alta</option>
+          <option value="media" selected>Media</option>
+          <option value="baja">Baja</option>
+        </select>
+      </label>
+      <label>
+        Notas
+        <textarea id="notes"></textarea>
+      </label>
+      <button type="submit">Agregar tarea</button>
+    </form>
+
+    <!-- Filtros -->
+    <div class="filters">
+      <label>
+        Tipo de materia:
+        <select id="filterType">
+          <option value="all" selected>Todas</option>
+          <option value="pensum">Pénsum</option>
+          <option value="electiva">Electivas</option>
+        </select>
+      </label>
+
+      <label>
+        Prioridad:
+        <select id="filterPriority">
+          <option value="all" selected>Todas</option>
+          <option value="alta">Alta</option>
+          <option value="media">Media</option>
+          <option value="baja">Baja</option>
+        </select>
+      </label>
+
+      <label>
+        Ordenar por fecha:
+        <select id="sortDate">
+          <option value="none" selected>Sin orden</option>
+          <option value="asc">Más próximas primero</option>
+          <option value="desc">Más lejanas primero</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Tareas pendientes -->
+    <h2>Tareas pendientes</h2>
+    <ul id="taskList" class="task-list"></ul>
+
+    <!-- Tareas completadas -->
+    <h2>Tareas completadas</h2>
+    <ul id="completedList" class="task-list completed-section"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f3f4f6;
+  color: #111827;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2563eb;
+}
+
+h2 {
+  margin: 20px 0 10px;
+  color: #374151;
+}
+
+/* Formulario */
+.task-form {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #374151;
+}
+
+.task-form input,
+.task-form select,
+.task-form textarea,
+.task-form button {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.task-form button {
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.task-form button:hover {
+  background: #1d4ed8;
+}
+
+/* Filtros */
+.filters {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.filters label {
+  font-size: 14px;
+  color: #374151;
+}
+
+.filters select {
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 14px;
+}
+
+/* Lista de tareas */
+.task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-item {
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.task-meta {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+/* Etiquetas */
+.badge {
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.badge.alta { background: #fee2e2; color: #b91c1c; }
+.badge.media { background: #fef3c7; color: #92400e; }
+.badge.baja { background: #dcfce7; color: #166534; }
+
+.badge.type-pensum { background: #e0e7ff; color: #3730a3; }
+.badge.type-electiva { background: #fef3c7; color: #92400e; }
+
+/* Acciones */
+.task-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.complete-btn {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.complete-btn:hover { background: #059669; }
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover { background: #dc2626; }
+
+/* Completadas */
+.completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.completed-section .task-item {
+  background: #f3f4f6;
+  border: 1px dashed #d1d5db;
+}
+
