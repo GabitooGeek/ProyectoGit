@@ -1,3 +1,5 @@
+Gabriel Tellez
+
 📚 Gestor de Tareas Universitarias
 
 Un gestor sencillo y funcional para organizar tareas académicas. Permite agregar, filtrar, ordenar, completar y eliminar tareas, almacenándolas localmente en el navegador mediante LocalStorage.
